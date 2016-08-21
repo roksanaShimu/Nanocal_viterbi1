@@ -11,7 +11,7 @@
 #include "Serial_Implementation.hpp"
 #include "Parallel_Implementation_1i.hpp"
 //#include "Parallel_Implementation_1ii.hpp"
-//#include "Parallel_Implementation_1ib.hpp"
+
 
 using namespace std;
 
@@ -60,15 +60,12 @@ int main(){
 	//parallel_calculations_1ii(n_states, m2, neighbors_from_v, ev, pm);
 	clock_t parallel_1ii_end = clock();
 
-	clock_t parallel_1ib_start = clock();
-	//parallel_calculations_1ib(n_states, m2, neighbors_from_v, ev, pm);
-	clock_t parallel_1ib_end = clock();
+
 
 
 	printf("Time taken for serial_code: %.6fs\n", (double)(serial_end - serial_start)/CLOCKS_PER_SEC);
 	printf("Time taken for parallel: %.6fs\n", (double)(parallel_end - parallel_start)/CLOCKS_PER_SEC);
 	printf("Time taken for parallel: %.6fs\n", (double)(parallel_1ii_end - parallel_1ii_start)/CLOCKS_PER_SEC);
-	printf("Time taken for parallel: %.6fs\n", (double)(parallel_1ib_end - parallel_1ib_start)/CLOCKS_PER_SEC);
 
 
 
